@@ -1,19 +1,24 @@
 let app: any;
 let initError: any = null;
 
-try {
-  // Use dynamic require/import to catch initialization errors
-  const serverModule = require("../server");
-  app = serverModule.default || serverModule;
-} catch (err: any) {
-  initError = {
-    message: err.message,
-    stack: err.stack,
-    name: err.name
-  };
+async function loadApp() {
+  try {
+    const serverModule = await import("../server");
+    app = serverModule.default || serverModule;
+  } catch (err: any) {
+    initError = {
+      message: err.message,
+      stack: err.stack,
+      name: err.name
+    };
+  }
 }
 
-export default function (req: any, res: any) {
+const loadPromise = loadApp();
+
+export default async function (req: any, res: any) {
+  await loadPromise;
+  
   if (initError) {
     res.status(500).json({
       error: "Initialization Error",
