@@ -1,5 +1,4 @@
 <div align="center">
-<img width="1200" height="475" alt="MediFlow Banner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
 # 🏥 MediFlow: Clinical Equipment & Resource Management Hub
