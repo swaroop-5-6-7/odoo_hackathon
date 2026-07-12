@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { db, Role } from "./server/db";
+import { db, Role } from "./server/db.js";
 
 dotenv.config();
 
