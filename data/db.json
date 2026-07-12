@@ -1,0 +1,421 @@
+{
+  "departments": [
+    {
+      "id": "dept_icu",
+      "name": "ICU",
+      "status": "Active",
+      "createdAt": 1781260719377,
+      "headId": "emp_hod_icu"
+    },
+    {
+      "id": "dept_er",
+      "name": "Emergency Room",
+      "status": "Active",
+      "createdAt": 1781260719377,
+      "headId": "emp_nurse_er"
+    },
+    {
+      "id": "dept_surg",
+      "name": "Surgical Suite",
+      "status": "Active",
+      "createdAt": 1781260719377
+    },
+    {
+      "id": "dept_gen",
+      "name": "General Ward",
+      "status": "Active",
+      "createdAt": 1781260719377
+    },
+    {
+      "id": "dept_maint",
+      "name": "Biomedical Engineering (Maintenance)",
+      "status": "Active",
+      "createdAt": 1781260719377,
+      "headId": "emp_tech_maint"
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp_super",
+      "name": "Dr. Helen Cho",
+      "email": "helen.cho@mediflow.org",
+      "passwordHash": "$2b$10$RA8OnlHDfnYIA4AlAuiW/.cmn7yWC1mOGAmHs4kDwM6yOHuFyt/gW",
+      "departmentId": "dept_icu",
+      "role": "Superintendent",
+      "status": "Active",
+      "phone": "+1 (555) 019-2834",
+      "createdAt": 1781692719377
+    },
+    {
+      "id": "emp_hod_icu",
+      "name": "Dr. Sarah Jenkins",
+      "email": "sarah.jenkins@mediflow.org",
+      "passwordHash": "$2b$10$RA8OnlHDfnYIA4AlAuiW/.cmn7yWC1mOGAmHs4kDwM6yOHuFyt/gW",
+      "departmentId": "dept_icu",
+      "role": "DepartmentHead",
+      "status": "Active",
+      "phone": "+1 (555) 019-5832",
+      "createdAt": 1782124719377
+    },
+    {
+      "id": "emp_nurse_er",
+      "name": "Nurse Alex Rivera",
+      "email": "alex.rivera@mediflow.org",
+      "passwordHash": "$2b$10$RA8OnlHDfnYIA4AlAuiW/.cmn7yWC1mOGAmHs4kDwM6yOHuFyt/gW",
+      "departmentId": "dept_er",
+      "role": "Nurse",
+      "status": "Active",
+      "phone": "+1 (555) 019-9944",
+      "createdAt": 1782556719377
+    },
+    {
+      "id": "emp_tech_maint",
+      "name": "Tech Dave Miller",
+      "email": "dave.miller@mediflow.org",
+      "passwordHash": "$2b$10$RA8OnlHDfnYIA4AlAuiW/.cmn7yWC1mOGAmHs4kDwM6yOHuFyt/gW",
+      "departmentId": "dept_maint",
+      "role": "Technician",
+      "status": "Active",
+      "phone": "+1 (555) 019-1122",
+      "createdAt": 1782988719377
+    }
+  ],
+  "equipment": [
+    {
+      "id": "eq_vent_1",
+      "name": "Ventilator V-100 (High-Flow)",
+      "category": "Ventilator",
+      "assetTag": "MF-0001",
+      "serialNumber": "SN-882736",
+      "status": "Allocated",
+      "location": "ICU-Bed1",
+      "departmentId": "dept_icu",
+      "isShared": true,
+      "requiresSterilization": true,
+      "lastSterilized": 1783593519377,
+      "condition": "Excellent",
+      "acquisitionDate": 1768300719377,
+      "acquisitionCost": 45000,
+      "notes": "High-pressure oxygen settings. Flow rate up to 60 L/min. Last calibration excellent.",
+      "createdAt": 1768300719377
+    },
+    {
+      "id": "eq_defib_1",
+      "name": "Lifepack Defibrillator D-200",
+      "category": "Defibrillator",
+      "assetTag": "MF-0002",
+      "serialNumber": "SN-443212",
+      "status": "Available",
+      "location": "Emergency-Room3",
+      "departmentId": "dept_er",
+      "isShared": true,
+      "requiresSterilization": false,
+      "condition": "Good",
+      "acquisitionDate": 1773484719377,
+      "acquisitionCost": 12000,
+      "notes": "Biphasic defibrillator, battery status at 95% charge.",
+      "createdAt": 1773484719377
+    },
+    {
+      "id": "eq_mon_1",
+      "name": "Patient Monitor M-10 (Multi-Para)",
+      "category": "Patient Monitor",
+      "assetTag": "MF-0003",
+      "serialNumber": "SN-128734",
+      "status": "Available",
+      "location": "Surgical-Bed2",
+      "departmentId": "dept_surg",
+      "isShared": false,
+      "requiresSterilization": true,
+      "lastSterilized": 1783075119377,
+      "condition": "Fair",
+      "acquisitionDate": 1763116719377,
+      "acquisitionCost": 8500,
+      "notes": "ECG, NIBP, SpO2 capability. Temperature channel 2 slightly noisy.",
+      "createdAt": 1763116719377
+    },
+    {
+      "id": "eq_cyl_1",
+      "name": "Medical Oxygen Cylinder O2-A",
+      "category": "Oxygen Cylinder",
+      "assetTag": "MF-0004",
+      "serialNumber": "SN-998822",
+      "status": "Available",
+      "location": "Storage-Room2",
+      "isShared": true,
+      "requiresSterilization": false,
+      "expiryDate": 1784716719377,
+      "condition": "Good",
+      "acquisitionDate": 1781260719377,
+      "acquisitionCost": 450,
+      "notes": "Standard pressure check passed. Clean and sealed.",
+      "createdAt": 1781260719377
+    },
+    {
+      "id": "eq_pump_1",
+      "name": "Infusion Pump IP-5 (Volumetric)",
+      "category": "Infusion Pump",
+      "assetTag": "MF-0005",
+      "serialNumber": "SN-334411",
+      "status": "Allocated",
+      "location": "General-Ward-Room12",
+      "departmentId": "dept_gen",
+      "isShared": true,
+      "requiresSterilization": true,
+      "lastSterilized": 1783766319377,
+      "condition": "Excellent",
+      "acquisitionDate": 1776076719377,
+      "acquisitionCost": 3200,
+      "notes": "Flow rate accuracy calibrated last month.",
+      "createdAt": 1776076719377
+    }
+  ],
+  "equipmentRequests": [
+    {
+      "id": "req_seed_1",
+      "equipmentId": "eq_vent_1",
+      "departmentId": "dept_icu",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "immediate",
+      "actualStart": 1783679919377,
+      "status": "Active",
+      "purpose": "Severe acute respiratory distress in ICU Bed 3",
+      "patientId": "PAT-2041",
+      "createdAt": 1783679919377
+    },
+    {
+      "id": "req_seed_2",
+      "equipmentId": "eq_pump_1",
+      "departmentId": "dept_gen",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "scheduled",
+      "scheduledStart": 1783593519377,
+      "scheduledEnd": 1783766319377,
+      "actualStart": 1783593519377,
+      "status": "Active",
+      "purpose": "Post-op IV continuous saline infusion",
+      "patientId": "PAT-1182",
+      "createdAt": 1783593519377
+    },
+    {
+      "id": "req_seed_3",
+      "equipmentId": "eq_defib_1",
+      "departmentId": "dept_er",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "immediate",
+      "actualStart": 1783420719377,
+      "actualEnd": 1783507119377,
+      "status": "Returned",
+      "purpose": "Emergency cardiac arrest stabilization - ER Bay 2",
+      "patientId": "PAT-8831",
+      "conditionCheck": "Excellent",
+      "createdAt": 1783420719377
+    },
+    {
+      "id": "req_seed_4",
+      "equipmentId": "eq_cyl_1",
+      "departmentId": "dept_icu",
+      "requestedBy": "emp_hod_icu",
+      "mode": "immediate",
+      "status": "Pending",
+      "purpose": "Urgent supplemental oxygen for clinical procedure",
+      "patientId": "PAT-4402",
+      "createdAt": 1783850919377
+    },
+    {
+      "id": "req_seed_5",
+      "equipmentId": "eq_mon_1",
+      "departmentId": "dept_surg",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "scheduled",
+      "scheduledStart": 1783867119377,
+      "scheduledEnd": 1783881519377,
+      "status": "Approved",
+      "purpose": "Post-op vitals monitoring in Ward A Room 3",
+      "patientId": "PAT-5120",
+      "createdAt": 1783834719377
+    },
+    {
+      "id": "req_seed_6",
+      "equipmentId": "eq_vent_1",
+      "departmentId": "dept_icu",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "immediate",
+      "actualStart": 1782556719377,
+      "actualEnd": 1782988719377,
+      "status": "Returned",
+      "purpose": "Severe COPD exacerbation support - Bed 1",
+      "patientId": "PAT-0092",
+      "conditionCheck": "Excellent",
+      "createdAt": 1782556719377
+    },
+    {
+      "id": "req_seed_7",
+      "equipmentId": "eq_pump_1",
+      "departmentId": "dept_gen",
+      "requestedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "mode": "scheduled",
+      "scheduledStart": 1783334319377,
+      "scheduledEnd": 1783507119377,
+      "actualStart": 1783334319377,
+      "actualEnd": 1783507119377,
+      "status": "Returned",
+      "purpose": "Pediatric antibiotic hydration loop",
+      "patientId": "PAT-3391",
+      "conditionCheck": "Good",
+      "createdAt": 1783247919377
+    }
+  ],
+  "maintenanceRequests": [
+    {
+      "id": "maint_seed_1",
+      "equipmentId": "eq_mon_1",
+      "raisedBy": "emp_nurse_er",
+      "priority": "High",
+      "issue": "Temperature channel has intermittent readings and high noise levels. Needs calibration.",
+      "status": "Pending",
+      "createdAt": 1783766319377
+    },
+    {
+      "id": "maint_seed_2",
+      "equipmentId": "eq_defib_1",
+      "raisedBy": "emp_nurse_er",
+      "approvedBy": "emp_super",
+      "priority": "Critical",
+      "issue": "Defibrillator screen flicker during high discharge simulation.",
+      "status": "Resolved",
+      "technicianAssigned": "emp_tech_maint",
+      "estimatedCompletion": 1783679919377,
+      "resolutionNotes": "Power supply decoupling capacitor replaced. Discharge calibration re-verified. Diagnostic logs green.",
+      "createdAt": 1783507119377
+    }
+  ],
+  "audits": [],
+  "auditFindings": [],
+  "activityLogs": [
+    {
+      "id": "log_init",
+      "userId": "emp_super",
+      "action": "System Initialization",
+      "details": "MediFlow v2 system started. 5 equipment, 4 employees seeded with rich histories.",
+      "timestamp": 1782988719377,
+      "metadata": {}
+    },
+    {
+      "id": "log_seed_1",
+      "userId": "emp_nurse_er",
+      "action": "Allocation Requested",
+      "details": "Requested High-Flow Ventilator MF-0001 for urgent bedside support",
+      "timestamp": 1783679919377,
+      "metadata": {
+        "equipmentId": "eq_vent_1"
+      }
+    },
+    {
+      "id": "log_seed_2",
+      "userId": "emp_super",
+      "action": "Request Approved",
+      "details": "Approved allocation request for Ventilator MF-0001",
+      "timestamp": 1783688559377,
+      "metadata": {
+        "equipmentId": "eq_vent_1"
+      }
+    },
+    {
+      "id": "log_seed_3",
+      "userId": "emp_nurse_er",
+      "action": "Equipment Dispatched",
+      "details": "Ventilator MF-0001 successfully moved and connected in Ward Bed 3",
+      "timestamp": 1783697199377,
+      "metadata": {
+        "equipmentId": "eq_vent_1"
+      }
+    },
+    {
+      "id": "log_seed_4",
+      "userId": "emp_nurse_er",
+      "action": "Maintenance Raised",
+      "details": "Raised high-priority maintenance ticket for Patient Monitor MF-0003",
+      "timestamp": 1783766319377,
+      "metadata": {
+        "equipmentId": "eq_mon_1"
+      }
+    },
+    {
+      "id": "log_t74q3kny3",
+      "userId": "emp_super",
+      "action": "Employee Login",
+      "details": "Dr. Helen Cho logged in.",
+      "timestamp": 1783852873269,
+      "metadata": {}
+    }
+  ],
+  "resources": [
+    {
+      "id": "res_room_b2",
+      "name": "Operating Room B2",
+      "type": "Room",
+      "location": "Surgical-Suite-Floor2",
+      "status": "Available"
+    },
+    {
+      "id": "res_room_a1",
+      "name": "ICU Critical Care A1",
+      "type": "Room",
+      "location": "ICU-Floor1",
+      "status": "Available"
+    },
+    {
+      "id": "res_room_c3",
+      "name": "Emergency Care Room C3",
+      "type": "Room",
+      "location": "Emergency-Floor1",
+      "status": "Available"
+    },
+    {
+      "id": "res_conf_alpha",
+      "name": "Conference Room Alpha",
+      "type": "Room",
+      "location": "Admin-Block-Floor3",
+      "status": "Available"
+    },
+    {
+      "id": "res_lab_bio",
+      "name": "Biomedical Training Lab",
+      "type": "Room",
+      "location": "Maint-Annex",
+      "status": "Available"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "book_1",
+      "resourceId": "res_room_b2",
+      "bookedBy": "emp_super",
+      "purpose": "Urgent cardiovascular surgery reservation",
+      "startTime": 1783859919377,
+      "endTime": 1783867119377,
+      "status": "Upcoming",
+      "createdAt": 1783834719377
+    },
+    {
+      "id": "book_2",
+      "resourceId": "res_room_a1",
+      "bookedBy": "emp_hod_icu",
+      "purpose": "ICU bed setup & monitoring calibration run",
+      "startTime": 1783841919377,
+      "endTime": 1783849119377,
+      "status": "Completed",
+      "createdAt": 1783816719377
+    }
+  ],
+  "counters": {
+    "assetTag": 5
+  }
+}

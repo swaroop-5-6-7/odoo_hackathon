@@ -1,0 +1,8 @@
+{
+  "name": "MediFlow",
+  "description": "Hospital Equipment & Resource Management System with real-time tracking, role-based workflows, and sterilization metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
