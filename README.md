@@ -3,6 +3,10 @@
 
 # 🏥 MediFlow: Clinical Equipment & Resource Management Hub
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-teal?style=flat-square&logo=vercel)](https://mediflow-two-teal.vercel.app)
+
+**Live Link:** [https://mediflow-two-teal.vercel.app](https://mediflow-two-teal.vercel.app)
+
 MediFlow is a comprehensive Clinical Equipment Analysis, Allocation, and Audit Discrepancy Reporting dashboard designed for hospitals. It streamlines biomedical engineering, asset tracking, sterilization compliance, ward bookings, and audit workflows while leveraging Google Gemini AI to analyze equipment health and maintenance risks.
 
 ---
