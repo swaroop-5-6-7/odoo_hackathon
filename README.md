@@ -45,12 +45,37 @@ MediFlow is a comprehensive Clinical Equipment Analysis, Allocation, and Audit D
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack & Architecture
 
-* **Frontend:** React (TypeScript), Vite, Tailwind CSS, Lucide React, Motion
-* **Backend:** Express (TypeScript), tsx
-* **Database:** In-memory Mock DB (`server/db.ts`) with disk persistence simulation (`data/db.json`)
-* **AI Service:** `@google/genai` (Gemini 3.5 Flash)
+### Frontend
+* **Core:** React 19 (TypeScript), Vite 6
+* **Styling & Aesthetics:** Tailwind CSS v4, Lucide Icons, Framer Motion (for smooth micro-animations and layouts)
+* **SPA Routing:** Integrated Vite SPA fallback routing for client-side navigation.
+
+### Backend & API
+* **Server Framework:** Express (running as ES Modules for modern JS standards)
+* **Local Run Tooling:** `tsx` (TypeScript Execute) for hot-reloading development
+* **Serverless Compatibility:** Structured to run seamlessly on serverless platforms (specifically Vercel) by decoupling the HTTP listener from the app configuration.
+
+### Data & Storage
+* **Database:** Simulated in-memory database with disk persistence.
+* **Storage Paths:**
+  * **Local Environment:** Persists to `data/db.json`.
+  * **Vercel Serverless Environment:** Dynamically redirects writes to the writable `/tmp/db.json` directory. Copies original seed data to `/tmp` at startup to ensure persistence between warm/cold starts.
+
+### AI Integration
+* **Service SDK:** `@google/genai` (Official Google GenAI SDK)
+* **Model:** Gemini 3.5 Flash
+* **Capabilities:** Operational summaries, predictive maintenance risk profiles, and optimized equipment rotation recommendations.
+
+---
+
+## ☁️ Vercel Deployment
+
+This project is fully optimized for Vercel deployment as a monorepo containing both the React SPA and the Express backend:
+
+1. **Routing (`vercel.json`)**: Configured to route all `/api/*` traffic to the backend serverless function while serving all static assets and falling back to `/index.html` for client-side routing.
+2. **Serverless Entrypoint (`api/index.ts`)**: Integrates the Express router with Vercel's Node runtime. Includes a diagnostic try-catch wrapper to capture and format initialization errors.
 
 ---
 
