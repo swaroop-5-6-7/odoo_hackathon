@@ -1,9 +1,8 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { db, Role } from "./server/db.ts";
+import { db, Role } from "./server/db";
 
 dotenv.config();
 
@@ -1272,6 +1271,7 @@ Generate three distinct sections in clean Markdown format:
 // Serve Frontend / Vite Middleware
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
