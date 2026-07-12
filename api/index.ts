@@ -3,7 +3,7 @@ let initError: any = null;
 
 async function loadApp() {
   try {
-    const serverModule = await import("../app.ts");
+    const serverModule = await import("../app.js");
     app = serverModule.default || serverModule;
   } catch (err: any) {
     initError = {
