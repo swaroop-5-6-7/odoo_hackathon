@@ -156,7 +156,7 @@ interface DBState {
   counters: Record<string, number>;
 }
 
-const DB_DIR = path.join(process.cwd(), "data");
+const DB_DIR = process.env.VERCEL ? "/tmp" : path.join(process.cwd(), "data");
 const DB_FILE = path.join(DB_DIR, "db.json");
 
 // Default initial state (seed data)
@@ -541,6 +541,12 @@ class DBManager {
     try {
       if (!fs.existsSync(DB_DIR)) {
         fs.mkdirSync(DB_DIR, { recursive: true });
+      }
+      if (process.env.VERCEL && !fs.existsSync(DB_FILE)) {
+        const originalPath = path.join(process.cwd(), "data", "db.json");
+        if (fs.existsSync(originalPath)) {
+          fs.copyFileSync(originalPath, DB_FILE);
+        }
       }
       if (fs.existsSync(DB_FILE)) {
         const data = fs.readFileSync(DB_FILE, "utf-8");

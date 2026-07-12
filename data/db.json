@@ -354,6 +354,30 @@
       "details": "Dr. Helen Cho logged in.",
       "timestamp": 1783852873269,
       "metadata": {}
+    },
+    {
+      "id": "log_7qocnp2li",
+      "userId": "emp_super",
+      "action": "Employee Login",
+      "details": "Dr. Helen Cho logged in.",
+      "timestamp": 1783853708414,
+      "metadata": {}
+    },
+    {
+      "id": "log_0orxd2yxa",
+      "userId": "emp_super",
+      "action": "Employee Login",
+      "details": "Dr. Helen Cho logged in.",
+      "timestamp": 1783854322968,
+      "metadata": {}
+    },
+    {
+      "id": "log_oo6k55zue",
+      "userId": "emp_super",
+      "action": "Resource Booked",
+      "details": "Booked resource \"Biomedical Training Lab\" for period: 11/7/2026, 9:00:00 am - 11/7/2026, 10:00:00 am",
+      "timestamp": 1783854943735,
+      "metadata": {}
     }
   ],
   "resources": [
@@ -413,6 +437,16 @@
       "endTime": 1783849119377,
       "status": "Completed",
       "createdAt": 1783816719377
+    },
+    {
+      "id": "book_w3lzuurg4",
+      "resourceId": "res_lab_bio",
+      "bookedBy": "emp_super",
+      "purpose": "sterilization run",
+      "startTime": 1783740600000,
+      "endTime": 1783744200000,
+      "status": "Upcoming",
+      "createdAt": 1783854943734
     }
   ],
   "counters": {
